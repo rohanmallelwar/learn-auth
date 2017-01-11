@@ -1,1 +1,3 @@
-<h2>Home</h2>
+<h2>Welcome</h2>
+<h5 *ngIf="auth.authenticated()">Logged in!</h5>
+<h5 *ngIf="!auth.authenticated()">Please Log in!</h5>

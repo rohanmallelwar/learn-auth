@@ -13,8 +13,10 @@
           <ul class="nav navbar-nav">
             <li ><a rotuerLink="/">Home</a></li>
            </ul>
-           <ul class="nav navbar-right">
-            <li><a rotuerLink="/profile">Profile</a></li>
+           <ul class="nav navbar-nav navbar-right">
+            <li><a href="#" (click)="auth.login()" *ngIf="!auth.authenticated()">Login</a></li>
+            <li><a rotuerLink="/profile" *ngIf="auth.authenticated()">Profile</a></li>
+            <li><a href="#" (click)="auth.logout()" *ngIf="auth.authenticated()">Logout</a></li>
            </ul>
         </div><!--/.nav-collapse -->
       </div>
